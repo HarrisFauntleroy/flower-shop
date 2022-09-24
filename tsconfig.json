@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "es2019",
+		"lib": [
+			"ESNext",
+			"DOM",
+		],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": false,
+		"esModuleInterop": true,
+		"noUncheckedIndexedAccess": true,
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"jsx": "preserve",
+		"incremental": true,
+		"outDir": "./dist",
+		"rootDir": "./"
+	},
+	"include": ["**/*.ts", "**/*.tsx", "./*.js"],
+	"exclude": ["node_modules"]
+}
