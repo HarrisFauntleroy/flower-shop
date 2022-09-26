@@ -1,4 +1,4 @@
-import checkout, { processOrder } from './checkout'
+import checkout, { calculateTotalCost, processOrder } from './checkout'
 import { Order, Output } from './types';
 
 export const flowersOrders: Order[] = [
@@ -127,11 +127,30 @@ const tulipsOrderOut = {
 	]
 };
 
-
 test("Checkout function accepts an array of orders and returns an array of order outputs", () => {
 	expect(processOrder(roseOrderIn)).toEqual(roseOrderOut);
 
 	expect(processOrder(lilyOrderIn)).toEqual(lilyOrderOut);
 
 	expect(processOrder(tulipsOrder)).toEqual(tulipsOrderOut);
+});
+
+test("calculateTotalCost accepts an array of priceBreakdowns and returns the total cost of the order", () => {
+
+	const input = [
+		{
+			amount: 2,
+			bundleSize: 10,
+			rate: 12.99,
+		},
+		{
+			amount: 1,
+			bundleSize: 5,
+			rate: 6.99,
+		}
+	];
+
+	const output = 32.97
+
+	expect(calculateTotalCost(input)).toEqual(output);
 });
