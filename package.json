@@ -2,16 +2,13 @@
   "name": "flower-shop",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "checkout.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.ts",
-    "start": "ts-node dist/index.js",
+    "dev": "nodemon example.ts",
+    "start": "ts-node dist/example.js",
     "build": "tsc -p .",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix && yarn format",
     "type-check": "tsc --noEmit",
-    "format": "prettier --write .",
     "test": "jest"
   },
   "devDependencies": {
