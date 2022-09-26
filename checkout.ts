@@ -58,11 +58,11 @@ export const processOrder = (order: Order) => {
 
 	const finalPrice = calculateTotalCost(priceBreakdown);
 
-	const result = Number(finalPrice?.toFixed(2));
+	const totalCost = Number(finalPrice?.toFixed(2));
 
 	return {
+		totalCost,
 		code: product?.code,
-		totalCost: result,
 		breakdown: priceBreakdown,
 	};
 };
