@@ -56,9 +56,7 @@ export const processOrder = (order: Order) => {
 		})
 		.filter((arrItem) => arrItem !== null);
 
-	const finalPrice = calculateTotalCost(priceBreakdown);
-
-	const totalCost = Number(finalPrice?.toFixed(2));
+	const totalCost = Number(calculateTotalCost(priceBreakdown)?.toFixed(2));
 
 	return {
 		totalCost,
