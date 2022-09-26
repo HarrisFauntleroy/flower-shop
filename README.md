@@ -22,7 +22,7 @@ yarn dev
 # Run tests
 yarn test
 
-# Check types tests
+# Check types
 yarn type-check
 
 # Build to Javascript (output in ./dist)
