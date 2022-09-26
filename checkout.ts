@@ -5,14 +5,14 @@
 import { Order, PriceBreakdown } from "./types";
 import { products } from "./products";
 
-
 type TotalCostInput = (PriceBreakdown | null)[] | undefined;
 
 /** Calculate final cost from the array of PriceBreakdown inputs */
-export const calculateTotalCost = (inputArr: TotalCostInput) => inputArr?.reduce((acc, obj) => {
-	const bundleCost = obj!.amount * obj!.rate;
-	return acc + bundleCost;
-}, 0);
+export const calculateTotalCost = (inputArr: TotalCostInput) =>
+	inputArr?.reduce((acc, obj) => {
+		const bundleCost = obj!.amount * obj!.rate;
+		return acc + bundleCost;
+	}, 0);
 
 /** Calculate a single order */
 export const processOrder = (order: Order) => {
@@ -65,7 +65,6 @@ export const processOrder = (order: Order) => {
 	};
 };
 
-const checkout = (orders: Order[]) =>
-	orders.map(processOrder);
+const checkout = (orders: Order[]) => orders.map(processOrder);
 
 export default checkout;
